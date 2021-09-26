@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import useRegister from "./hooks/useRegister";
 
 const RegistrationPage = () => {
   const initialState = { firstName: "", lastName: "", email: "" };
   const [formData, setFormData] = useState(initialState);
+  const handleRegister = useRegister();
   const handleChange = (evt) => {
     setFormData((fData) => ({
       ...fData,
@@ -11,7 +13,7 @@ const RegistrationPage = () => {
   };
 
   return (
-    <form>
+    <form onSubmit={async (evt) => await handleRegister(evt, formData)}>
       <div>
         <label htmlFor="firstName">First name: </label>
         <input
