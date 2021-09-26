@@ -1,5 +1,4 @@
 import React from "react";
-import "./Routes.css";
 import Container from "react-bootstrap/Container";
 import { Route, Switch } from "react-router-dom";
 import RegistrationPage from "./RegistrationPage";
