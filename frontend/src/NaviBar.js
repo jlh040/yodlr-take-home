@@ -6,14 +6,14 @@ const NaviBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand>
           <Nav.Link exact to="/" as={NavLink}>
             Yodlr Design Challenge
           </Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+          <Nav>
             <Nav.Link exact to="/admin" as={NavLink}>
               Admin page
             </Nav.Link>
