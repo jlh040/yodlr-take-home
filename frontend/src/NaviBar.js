@@ -8,7 +8,7 @@ const NaviBar = () => {
       <Container>
         <Navbar.Brand>
           <Nav.Link exact to="/" as={NavLink}>
-            Yodlr Design Challenge
+            Home
           </Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
