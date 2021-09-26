@@ -3,7 +3,7 @@
 - To get this code onto your machine, first run `git clone https://github.com/jlh040/yodlr-take-home.git`
 - Then, cd into the yodlr-take-home parent folder and run `npm install`
 - Then cd into the frontend folder and run `npm install`
-- Open up two tabs; in one tab, run `npm start` in the yodlr-take-home parent folder to start up the backend server, in the other tab, cd into the frontend folder, and run npm start to start up the frontend server.
+- Open up two tabs; in one tab, run `npm start` in the yodlr-take-home parent folder to start up the backend server, in the other tab, cd into the frontend folder, and run `npm start` to start up the frontend server.
 - You can then head over to **http://localhost:3000** to check out the site.
 
 Yodlr Front End Engineer Code/Design Challenge
