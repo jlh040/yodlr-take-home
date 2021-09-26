@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useRegister from "./hooks/useRegister";
+import Button from "react-bootstrap/Button";
 
 const RegistrationPage = () => {
   const initialState = { firstName: "", lastName: "", email: "" };
@@ -44,7 +45,7 @@ const RegistrationPage = () => {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Submit</button>
+      <Button type="submit">Submit</Button>
     </form>
   );
 };
