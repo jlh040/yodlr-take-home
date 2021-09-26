@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useRegister from "./hooks/useRegister";
-import Button from "react-bootstrap/Button";
+import { Button, Form } from "react-bootstrap";
 
 const RegistrationPage = () => {
   const initialState = { firstName: "", lastName: "", email: "" };
@@ -14,39 +14,42 @@ const RegistrationPage = () => {
   };
 
   return (
-    <form onSubmit={async (evt) => await handleRegister(evt, formData)}>
-      <div>
-        <label htmlFor="firstName">First name: </label>
-        <input
+    <Form onSubmit={(evt) => handleRegister(evt, formData)}>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>First name:</Form.Label>
+        <Form.Control
           type="text"
-          id="firstName"
+          placeholder="Enter first name"
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
         />
-      </div>
-      <div>
-        <label htmlFor="lastName">Last name: </label>
-        <input
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Last name:</Form.Label>
+        <Form.Control
           type="text"
-          id="lastName"
+          placeholder="Enter last name"
           name="lastName"
           value={formData.lastName}
           onChange={handleChange}
         />
-      </div>
-      <div>
-        <label htmlFor="email">Email: </label>
-        <input
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email:</Form.Label>
+        <Form.Control
           type="email"
-          id="email"
+          placeholder="Enter email"
           name="email"
           value={formData.email}
           onChange={handleChange}
         />
-      </div>
-      <Button type="submit">Submit</Button>
-    </form>
+      </Form.Group>
+
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
   );
 };
 

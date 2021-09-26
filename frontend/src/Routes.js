@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
 import { Route, Switch } from "react-router-dom";
 import RegistrationPage from "./RegistrationPage";
 import AdminPage from "./AdminPage";
@@ -6,7 +7,7 @@ import Homepage from "./Homepage";
 
 const Routes = () => {
   return (
-    <div>
+    <Container>
       <Switch>
         <Route exact path="/signup">
           <RegistrationPage />
@@ -18,7 +19,7 @@ const Routes = () => {
           <Homepage />
         </Route>
       </Switch>
-    </div>
+    </Container>
   );
 };
 
