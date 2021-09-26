@@ -15,20 +15,22 @@ const AdminPage = () => {
 
   return (
     <div>
-      <h2>Admin page</h2>
-      {allUsers ? (
-        allUsers.map((user) => (
-          <User
-            key={user.id}
-            firstName={user.firstName}
-            lastName={user.lastName}
-            email={user.email}
-            state={user.state}
-          />
-        ))
-      ) : (
-        <p>Loading...</p>
-      )}
+      <h1 className="text-center mt-2">Admin page</h1>
+      <div>
+        {allUsers ? (
+          allUsers.map((user) => (
+            <User
+              key={user.id}
+              firstName={user.firstName}
+              lastName={user.lastName}
+              email={user.email}
+              state={user.state}
+            />
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
     </div>
   );
 };
