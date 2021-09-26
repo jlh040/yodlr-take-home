@@ -19,6 +19,7 @@ const AdminPage = () => {
       {allUsers ? (
         allUsers.map((user) => (
           <User
+            key={user.id}
             firstName={user.firstName}
             lastName={user.lastName}
             email={user.email}

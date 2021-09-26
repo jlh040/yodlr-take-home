@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const RegistrationPage = () => {
-  return <h2>Register page</h2>;
+  const initialState = { firstName: "", lastName: "", email: "", state: "" };
+  const [formData, setFormData] = useState(initialState);
+  return <form></form>;
 };
 
 export default RegistrationPage;
