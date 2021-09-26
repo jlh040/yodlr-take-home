@@ -1,5 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import RegistrationPage from "./RegistrationPage";
+import AdminPage from "./AdminPage";
 
 const Routes = () => {
   return (
