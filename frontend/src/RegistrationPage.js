@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 
 const RegistrationPage = () => {
-  const initialState = { firstName: "", lastName: "", email: "", state: "" };
+  const initialState = { firstName: "", lastName: "", email: "" };
   const [formData, setFormData] = useState(initialState);
   const handleChange = (evt) => {
     setFormData((fData) => ({
+      ...fData,
       [evt.target.name]: evt.target.value,
     }));
   };
+
   return (
     <form>
       <div>
@@ -40,6 +42,7 @@ const RegistrationPage = () => {
           onChange={handleChange}
         />
       </div>
+      <button type="submit">Submit</button>
     </form>
   );
 };
